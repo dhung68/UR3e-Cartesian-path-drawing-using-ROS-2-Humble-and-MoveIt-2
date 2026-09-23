@@ -42,7 +42,7 @@ ur3e_letter_drawer/
 - Nâng đầu công tác khi di chuyển giữa các nét.
 - Gọi `computeCartesianPath()` để tính quỹ đạo.
 - Chỉ thực thi khi tỷ lệ quỹ đạo đạt ít nhất 95%.
-- Công bố Marker màu đỏ trên topic `/letter_marker`.
+- Publish Marker màu đỏ trên topic `/letter_marker`.
 
 ### `circle_drawer_node`
 
@@ -78,7 +78,7 @@ git clone -b humble \
 Clone package bài tập:
 
 ```bash
-git clone <LINK_GITHUB_CUA_BAN> \
+git clone https://github.com/dhung68/UR3e-Cartesian-path-drawing-using-ROS-2-Humble-and-MoveIt-2\
   src/ur3e_letter_drawer
 ```
 
@@ -134,34 +134,7 @@ Trong RViz:
 
 Marker biểu diễn quỹ đạo Cartesian dự kiến của đầu công tác.
 
-## 8. Kiểm tra hệ thống
-
-Kiểm tra joint state:
-
-```bash
-ros2 topic echo /joint_states --once
-```
-
-Kiểm tra controller:
-
-```bash
-ros2 control list_controllers
-```
-
-Kiểm tra executable:
-
-```bash
-ros2 pkg executables ur3e_letter_drawer
-```
-
-Kết quả cần có:
-
-```text
-ur3e_letter_drawer circle_drawer_node
-ur3e_letter_drawer letter_drawer_node
-```
-
-## 9. Phương pháp tạo quỹ đạo
+## 8.Phương pháp tạo quỹ đạo
 
 ### Chữ H
 
@@ -189,19 +162,11 @@ z = constant
 
 Đường tròn được chia thành 72 đoạn để tạo chuyển động mượt.
 
-## 10. Kết quả
+## 9.Kết quả
 
 - Cartesian path chữ H: 100%.
 - Cartesian path hình tròn: 100%.
 - Robot thực thi thành công trong Gazebo.
 - Joint state và trajectory controller hoạt động bình thường.
-- Quỹ đạo không vượt giới hạn khớp và không xảy ra self-collision.
 
-## 11. Video demo
 
-- Video: 
-
-## 12. Author
-
-- Họ tên: Dương Văn Hùng
-- Mã sinh viên: 23020744
